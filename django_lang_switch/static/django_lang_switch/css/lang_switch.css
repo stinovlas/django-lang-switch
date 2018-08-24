@@ -1,0 +1,8 @@
+div.lang-switch {
+    float: right;
+}
+
+div.lang-switch select {
+    background: #eaeaea;
+    border: none;
+}
