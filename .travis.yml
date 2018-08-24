@@ -1,13 +1,39 @@
+stages:
+    - check
+    - test
+
 language: python
 sudo: false
-python:
-    - "3.5"
-    - "3.6"
-    - "3.7"
-
+stage: test
 install:
     # tox-travis automatically splits the jobs
     - pip install tox-travis
 
 script:
     - tox
+
+python:
+    - 3.5
+    - 3.6
+
+matrix:
+    include:
+        - python: 3.7
+          dist: xenial
+          sudo: true
+
+        - stage: check
+          name: "ESLint"
+          language: node_js
+          node_js: 9
+          before_script:
+              - npm install eslint
+          install: true
+          script:
+              - eslint ./**/*.js
+
+        - stage: check
+          name: "Quality"
+          python: 3.6
+          script:
+              tox -e quality
