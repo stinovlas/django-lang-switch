@@ -32,7 +32,6 @@ matrix:
         - stage: check
           name: "ESLint"
           language: node_js
-          node_js: 7
           sudo: true
           env: # empty
           before_script:
