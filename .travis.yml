@@ -3,7 +3,12 @@ sudo: false
 python:
     - "3.5"
     - "3.6"
-    - "3.7"
+
+matrix:
+    include:
+        - python: "3.7"
+          dist: xenial
+          sudo: true
 
 install:
     # tox-travis automatically splits the jobs
