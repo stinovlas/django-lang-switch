@@ -2,7 +2,7 @@
  Changelog
 ===========
 
-git
+0.1
 ===
 * Setup CI
 * Add ``lang_switch_dropdown`` template tag
