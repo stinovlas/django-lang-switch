@@ -14,6 +14,7 @@ def lang_switch_dropdown(redirect_to: str = None):
 
     Returns:
         Rendered select box language switch.
+
     """
     if redirect_to is None:
         return {}
