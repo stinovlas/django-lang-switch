@@ -1,0 +1,23 @@
+{% load i18n %}
+{% load static %}
+
+<div class="lang-switch">
+    <form action="{% url 'django_lang_switch:set_language' %}" method="post">
+        {% csrf_token %}
+        {% if redirect_to %}
+            <input name="next" type="hidden" value="{{ redirect_to }}">
+        {% endif %}
+        <select name="language">
+            {% get_current_language as LANGUAGE_CODE %}
+            {% get_available_languages as LANGUAGES %}
+            {% get_language_info_list for LANGUAGES as languages %}
+            {% for language in languages %}
+                <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected{% endif %}>
+                    {{ language.name_local|capfirst }} ({{ language.code }})
+                </option>
+            {% endfor %}
+        </select>
+    </form>
+</div>
+
+<script type="text/javascript" src="{% static "django_lang_switch/js/lang_switch.js" %}"></script>
