@@ -1,4 +1,5 @@
 {% extends "admin/base.html" %}
+{% load static %}
 {% load lang_switch %}
 
 {% block title %}{{ title }} | {{ site_title|default:_('Django site admin') }}{% endblock %}
@@ -12,4 +13,8 @@
 {% block usertools %}
     {{ block.super }}
     {% lang_switch_dropdown %}
+{% endblock %}
+
+{% block extrastyle %}
+    <link rel="stylesheet" type="text/css" href="{% static "django_lang_switch/css/lang_switch.css" %}">
 {% endblock %}
