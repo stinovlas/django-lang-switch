@@ -3,7 +3,7 @@ django-lang-switch
 ==================
 
 .. image:: https://travis-ci.org/stinovlas/django-lang-switch.svg?branch=master
-    :target: https://github.com/stinovlas/django-lang-switch
+    :target: https://travis-ci.org/stinovlas/django-lang-switch
 .. image:: https://codecov.io/gh/stinovlas/django-lang-switch/branch/master/graph/badge.svg
     :target: https://codecov.io/gh/stinovlas/django-lang-switch
 .. image:: https://img.shields.io/pypi/v/django-lang-switch.svg
