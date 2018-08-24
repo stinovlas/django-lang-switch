@@ -1,7 +1,8 @@
 {% load i18n %}
 
 <div class="lang-switch">
-    <form action="{% url 'django_lang_switch:set_language' %}" method="post">{% csrf_token %}
+    <form action="{% url 'django_lang_switch:set_language' %}" method="post">
+        {% csrf_token %}
         <input name="next" type="hidden" value="{{ redirect_to }}">
         <select name="language" onchange="this.form.submit()">
             {% get_current_language as LANGUAGE_CODE %}
