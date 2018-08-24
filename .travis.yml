@@ -1,29 +1,38 @@
+stages:
+    - check
+    - test
+
 language: python
 sudo: false
-stage: "Test"
-python:
-    - "3.5"
-    - "3.6"
-
-matrix:
-    include:
-        - stage: "Test"
-          python: "3.7"
-          dist: xenial
-          sudo: true
-
-        - stage: "Check"
-          name: "ESLint"
-          language: node_js
-          node_js: "7"
-          before_script:
-              - npm install eslint
-          script:
-              - npx eslint ./**/*.js
-
+stage: test
 install:
     # tox-travis automatically splits the jobs
     - pip install tox-travis
 
 script:
     - tox
+
+python:
+    - 3.5
+    - 3.6
+
+env:
+    - DJANGO="2.0"
+    - DJANGO="2.1"
+
+matrix:
+    include:
+        - python: 3.7
+          dist: xenial
+          sudo: true
+
+        - stage: check
+          name: "ESLint"
+          language: node_js
+          node_js: 7
+          env: # empty
+          before_script:
+              - npm install eslint
+          install: true
+          script:
+              - npx eslint ./**/*.js
