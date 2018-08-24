@@ -18,6 +18,6 @@ class TestDropdownMenu(SimpleTestCase):
         rendered = self.render_template(
             '{% load lang_switch %}{% lang_switch_dropdown %}'
         )
-        self.assertRegex(rendered, r'<option value="en">\s*English \(en\)\s*</option>')
-        self.assertRegex(rendered, r'<option value="cs" selected>\s*Česky \(cs\)\s*</option>')
-        self.assertRegex(rendered, r'<option value="ko">\s*한국어 \(ko\)\s*</option>')
+        self.assertInHTML('<option value="en">English (en)</option>', rendered)
+        self.assertInHTML('<option value="cs" selected>Česky (cs)</option>', rendered)
+        self.assertInHTML('<option value="ko">한국어 (ko)</option>', rendered)
