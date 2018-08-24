@@ -2,10 +2,10 @@
 django-lang-switch
 ==================
 
-.. image:: https://travis-ci.org/stinovlas/django-lang-switch.svg?branch=master
-    :target: https://travis-ci.org/stinovlas/django-lang-switch
-.. image:: https://codecov.io/gh/stinovlas/django-lang-switch/branch/master/graph/badge.svg
-    :target: https://codecov.io/gh/stinovlas/django-lang-switch
+.. image:: https://travis-ci.org/stinovlas/django-lang-switch.svg?branch=devel
+    :target: https://travis-ci.org/stinovlas/django-lang-switch/branches
+.. image:: https://codecov.io/gh/stinovlas/django-lang-switch/branch/devel/graph/badge.svg
+    :target: https://codecov.io/gh/stinovlas/django-lang-switch/branch/devel
 .. image:: https://img.shields.io/pypi/v/django-lang-switch.svg
     :target: https://pypi.org/project/django-lang-switch
 .. image:: https://img.shields.io/pypi/pyversions/django-lang-switch.svg
