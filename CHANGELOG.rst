@@ -2,6 +2,11 @@
  Changelog
 ===========
 
+0.3
+===
+* Fix MANIFEST.in
+  * Include templates and other files outside of ``static`` directory
+
 0.2
 ===
 * Fix homepage url in setup.py
