@@ -2,7 +2,12 @@
  Changelog
 ===========
 
-git
+0.2
+===
+* Fix homepage url in setup.py
+* Fix static links in MANIFEST.in
+
+0.1
 ===
 * Setup CI
 * Add ``lang_switch_dropdown`` template tag
