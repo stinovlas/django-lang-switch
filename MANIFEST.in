@@ -2,4 +2,6 @@ include LICENSE
 include README.rst
 include CHANGELOG.rst
 include requirements.txt
-recursive-include django_lang_switch/static *
+graft django_lang_switch
+global-exclude *.pyc
+global-exclude __pycache__
